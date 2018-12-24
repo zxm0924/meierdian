@@ -1,25 +1,41 @@
 <template>
   <div id="app">
-    <div class="top">
-      <a href="#"><img src="" alt="Logo">恒信邦</a>
-    </div>
+    <nav class="header">
+      <p class="header-content" href="#">恒信邦</p>
+    </nav>
     <div class="main-content">
       <div class="topcontent"></div>
       <div class="butcontent">
         <ul>
-          <li><a href="#">1</a></li>
-          <li><a href="#">1</a></li>
-          <li><a href="#">1</a></li>
-          <li><a href="#">1</a></li>
-          <li><a href="#">1</a></li>
-          <li><a href="#">1</a></li>
+          <li>
+            <a href="#">1</a>
+          </li>
+          <li>
+            <a href="#">1</a>
+          </li>
+          <li>
+            <a href="#">1</a>
+          </li>
+          <li>
+            <a href="#">1</a>
+          </li>
+          <li>
+            <a href="#">1</a>
+          </li>
+          <li>
+            <a href="#">1</a>
+          </li>
         </ul>
       </div>
     </div>
     <div class="foot">
       <ul>
-        <li><a href="#">首页</a></li>
-        <li><a href="#">产品</a></li>
+        <li>
+          <a href="#">首页</a>
+        </li>
+        <li>
+          <a href="#">产品</a>
+        </li>
       </ul>
     </div>
   </div>
@@ -27,17 +43,24 @@
 
 <script>
   export default {
-    name: 'App',
-    components: {
-
-    }
-  }
+    name: "App",
+    components: {}
+  };
 </script>
 
-<style>
-  body {
-    padding: 0;
-    margin: 0px;
+<style lang="css">
+  .header {
+    height: 3.5rem;
+    background-color: skyblue;
+    padding-left: 0.5rem;
+  }
+  
+  .header-content {
+    text-decoration: none;
+    line-height: 50px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #fff;
   }
 
   li {
@@ -45,11 +68,8 @@
     list-style: none;
   }
 
-  ;
-
   ul {
     padding: 0px;
-
   }
 
   a {
@@ -57,23 +77,11 @@
     color: #fff;
   }
 
-  .top {
-    height: 50px;
-    background-color: skyblue;
-    padding-left: 10px;
-  }
-
-  .top a {
-    text-decoration: none;
-    line-height: 50px;
-    font-size: 18px;
-  }
-
   .foot {
-    /* background-color: yellowgreen; */
-    height: 60px;
+    position: fixed;
+    bottom: 0;
+    height: 3.5rem;
     width: 100%;
-
   }
 
   .foot ul {

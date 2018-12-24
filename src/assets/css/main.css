@@ -2,14 +2,6 @@ body {
     margin: 0px;
     background: #fff;
 }
-
-.header {
-    height: 0.48rem !important;
-    background: #1D1D1D !important;
-    opacity: 1;
-    margin: 0px
-}
-
  
 @media screen and (min-width: 375px) {
     html {
