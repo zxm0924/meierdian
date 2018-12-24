@@ -1,153 +1,96 @@
 <template>
   <div id="app">
-    <nav class="header">
-      <p class="header-content" href="#">恒信邦</p>
-    </nav>
-    <div class="main-content">
-      <div class="topcontent"></div>
-      <div class="butcontent">
-        <ul>
-          <li>
-            <a href="#">1</a>
-          </li>
-          <li>
-            <a href="#">1</a>
-          </li>
-          <li>
-            <a href="#">1</a>
-          </li>
-          <li>
-            <a href="#">1</a>
-          </li>
-          <li>
-            <a href="#">1</a>
-          </li>
-          <li>
-            <a href="#">1</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="foot">
-      <ul>
-        <li>
-          <a href="#">首页</a>
-        </li>
-        <li>
-          <a href="#">产品</a>
-        </li>
-      </ul>
-    </div>
+    <mt-header fixed title="梅子乐园"></mt-header>
+    <mt-tab-container class="tabbar-container" v-model="selected">
+      <mt-tab-container-item id="首页">
+        <mt-swipe :auto="4000">
+          <mt-swipe-item class="slide1">
+            <!-- <img style="width: 100%" src="./assets/cat/bosimao.jpg"> -->
+          </mt-swipe-item>
+          <mt-swipe-item class="slide2">
+            <!-- <img src="./assets/cat/buoumao.jpg"> -->
+          </mt-swipe-item>
+          <mt-swipe-item class="slide3">
+            <!-- <img src="./assets/cat/duanweimao.jpg"> -->
+          </mt-swipe-item>
+        </mt-swipe>
+        <div>test</div>
+      </mt-tab-container-item>
+
+      <mt-tab-container-item id="我的">
+        <div class="page-part">个人信息中心</div>
+        <router-link to="/">
+          <mt-button type="danger" size="large">退出</mt-button>
+        </router-link>
+      </mt-tab-container-item>
+    </mt-tab-container>
+
+    <mt-tabbar v-model="selected" fixed>
+      <mt-tab-item id="首页">
+        <i class="fa fa-home fa-3x"></i>
+        <br>首页
+      </mt-tab-item>
+      <mt-tab-item id="我的">
+        <i class="fa fa-user fa-3x"></i>
+        <br>我的
+      </mt-tab-item>
+    </mt-tabbar>
   </div>
 </template>
 
 <script>
-  export default {
-    name: "App",
-    components: {}
-  };
+export default {
+  name: "App",
+  data() {
+    return {
+      selected: "首页"
+    };
+  },
+  components: {}
+};
 </script>
 
 <style lang="css">
-  .header {
-    height: 3.5rem;
-    background-color: skyblue;
-    padding-left: 0.5rem;
-  }
-  
-  .header-content {
-    text-decoration: none;
-    line-height: 50px;
-    font-size: 1.5rem;
-    text-decoration: none;
-    color: #fff;
-  }
-
-  li {
-    padding: 0;
-    list-style: none;
-  }
-
-  ul {
-    padding: 0px;
-  }
-
-  a {
-    text-decoration: none;
-    color: #fff;
-  }
-
-  .foot {
-    position: fixed;
-    bottom: 0;
-    height: 3.5rem;
-    width: 100%;
-  }
-
-  .foot ul {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    /* background-color: pink; */
-    padding: 0px;
-    justify-content: space-around;
-    flex-direction: row;
-    align-items: center;
-    background-color: #282828;
-  }
-
-  .foot ul li {
-    height: 100%;
-    width: 50%;
-    list-style: none;
-    text-align: center;
-  }
-
-  .foot ul li:hover {
-    background-color: #171a1b;
-    color: #1b82c8;
-  }
-
-  .foot ul li a {
-    color: #fff;
-    font-size: 16px;
-    line-height: 50px;
-    text-decoration: none;
-  }
-
-  .main-content {
-    /* background-color: #e6aee1; */
-    height: 685px;
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  .main-content .topcontent {
-    height: 400px;
-    background-color: pink;
-    width: 100%;
-  }
-
-  .main-content .butcontent {
-    margin-top: 10px;
-    height: 285px;
-  }
-
-  .main-content .butcontent ul {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    /* background-color: pink; */
-    padding: 0px;
-    justify-content: space-around;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-
-  .main-content .butcontent ul li {
-    width: 29%;
-    height: 120px;
-    background-color: #0096ff;
-  }
+.tabbar-container {
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 40px;
+}
+.mint-swipe {
+  height: 18.75rem;
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.slide1 {
+  /* background-color: #0089dc; */
+  color: #fff;
+  height: 18.75rem !important;
+  background-image: url('assets/cat/bosimao.jpg');
+  /* background-attachment: fixed;  */
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  -moz-background-size:100% 100%;
+}
+.slide2 {
+  /* background-color: #ffd705; */
+  color: #000;
+  height: 18.75rem !important;
+  background-image: url('assets/cat/buoumao.jpg');
+  /* background-attachment: fixed; */
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  -moz-background-size:100% 100%;
+}
+.slide3 {
+  /* background-color: #ff2d4b; */
+  color: #fff;
+  height: 18.75rem !important;
+  background-image: url('assets/cat/duanweimao.jpg');
+  /* background-attachment: fixed; */
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  -moz-background-size:100% 100%;
+}
 </style>
