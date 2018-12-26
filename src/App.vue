@@ -93,7 +93,7 @@
             body: '以前关心用“踩”的，现在存在感用“赞”的“云”联系太久，何时见面约酒.....'
           }
         ],
-        
+
       };
     },
     components: {},
@@ -194,7 +194,7 @@
     position: relative;
   }
 
-  .content ul li:nth-child(1) {
+  .content ul li:hover{
     background-color: #446174;
   }
 
