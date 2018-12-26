@@ -15,6 +15,8 @@ import './assets/css/main.css'
 // import Mint from 'mint-ui'
 // import 'mint-ui/lib/style.css'
 // Vue.use(Mint)
+
+
 import {
   Header,
   Tabbar,
@@ -23,7 +25,11 @@ import {
   TabContainerItem,
   Cell,
   Button,
-  Swipe, SwipeItem
+  Swipe,
+  SwipeItem,
+  InfiniteScroll,
+  Field
+
 } from 'mint-ui'
 
 Vue.config.productionTip = false
@@ -37,10 +43,15 @@ Vue.component(Cell.name, Cell)
 Vue.component(Button.name, Button)
 Vue.component(Swipe.name, Swipe)
 Vue.component(SwipeItem.name, SwipeItem)
+Vue.use(InfiniteScroll)
+Vue.component(Field.name, Field)
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
-  components: { App },
+  components: {
+    App
+  },
   template: '<App/>'
 })
