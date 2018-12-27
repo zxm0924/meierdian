@@ -15,14 +15,38 @@
           </mt-swipe-item>
         </mt-swipe>
         <div class="content">
-          <ul>
+          <div class="content-item">
+            <i class="fa fa-pied-piper fa-lg icon"></i>
+            <p class="content-title">滑溜溜</p>              
+          </div>
+           <div class="content-item">
+            <i class="fa fa-pied-piper fa-lg icon"></i>
+            <p class="content-title">滑溜溜</p>              
+          </div>
+           <div class="content-item">
+            <i class="fa fa-pied-piper fa-lg icon"></i>
+            <p class="content-title">滑溜溜</p>          
+          </div>
+           <div class="content-item">
+            <i class="fa fa-pied-piper fa-lg icon"></i>
+            <p class="content-title">滑溜溜</p>    
+          </div>
+           <div class="content-item">
+            <i class="fa fa-pied-piper fa-lg icon"></i>
+            <p class="content-title">滑溜溜</p>            
+          </div>
+           <div class="content-item">
+            <i class="fa fa-pied-piper fa-lg icon"></i>
+            <p class="content-title">滑溜溜</p>        
+          </div>
+          <!-- <ul>
             <li><a href="#">滑溜溜</a><i class="fa fa-pied-piper fa-lg"></i></li>
             <li><a href="#">过家家</a><i class="fa fa-pied-piper fa-lg"></i></li>
             <li><a href="#">做刺绣</a><i class="fa fa-pied-piper fa-lg"></i></li>
             <li><a href="#">摘酸球</a><i class="fa fa-pied-piper fa-lg"></i></li>
             <li><a href="#">刨洋芋</a><i class="fa fa-pied-piper fa-lg"></i></li>
             <li><a href="#">躲猫猫</a><i class="fa fa-pied-piper fa-lg"></i></li>
-          </ul>
+          </ul> -->
         </div>
         <div class="new">
           <ul v-infinite-scroll="loadMore" infinite-scroll-disabled="loading" infinite-scroll-distance="10">
@@ -125,6 +149,7 @@
     background: {
       color: $header-color;
     }
+    opacity: 0.9;
   }
 
   /* .#7988a5 */
@@ -180,43 +205,59 @@
   }
 
   .content {
-    // height: 15rem;
-    /* border:0.1rem solid red; */
-  }
-
-  .content ul {
+    display: -webkit-flex; /* Safari */
     display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    flex-wrap: wrap;
+    justify: {
+      content: space-around;
+    }
+    flex: {
+      direction: row;
+      wrap: wrap;
+    }
   }
 
-  .content ul li {
-    width: 30.33%;
+  .content-item {
+    width: 30.3%;
     /* flex-wrap: wrap; */
     height: 6.5rem;
     margin: 5px;
-    background-color: #11acc7;
+    background-color: $content-item-backgroud-color;
     text-align: center;
     line-height: 7.5rem;
     position: relative;
+    &:hover   {
+        background-color: #446174;
+    }
   }
 
-  .content ul li:hover{
-    background-color: #446174;
+  @media screen and (max-width: 360px) {
+    .content-item {
+      width: 43.3%;
+      /* flex-wrap: wrap; */
+      height: 6.5rem;
+      margin: 5px;
+      background-color: $content-item-backgroud-color;
+      text-align: center;
+      line-height: 7.5rem;
+      position: relative;
+      &:hover  {
+        background-color: #446174;
+      }
+    }
   }
 
-  .content ul li a {
-    color: rgb(247, 247, 247);
-    font-size: 16px;
-    /* font-weight: 600; */
-  }
-
-  .content ul li i {
-    position: absolute;
-    top: 1.4rem;
-    left: 2.7rem;
+  .icon {
+    position: relative;
+    top: 2rem;
+    /* left: 2.7rem; */
     color: #b0d9a5;
+    display: block;
+  }
+
+  .content-title {
+    color: #f7f7f7;
+    display: contents;
+    font-size: 16px;
   }
 
   .new {
