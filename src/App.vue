@@ -16,27 +16,27 @@
         </mt-swipe>
         <div class="content">
           <div class="content-item">
-            <i class="fa fa-pied-piper fa-lg icon"></i>
+            <i class="fa fa-pied-piper fa-2x icon"></i>
+            <a class="content-title">滑溜溜</a>              
+          </div>
+           <div class="content-item">
+            <i class="fa fa-pied-piper fa-2x  icon"></i>
             <p class="content-title">滑溜溜</p>              
           </div>
            <div class="content-item">
-            <i class="fa fa-pied-piper fa-lg icon"></i>
-            <p class="content-title">滑溜溜</p>              
-          </div>
-           <div class="content-item">
-            <i class="fa fa-pied-piper fa-lg icon"></i>
+            <i class="fa fa-pied-piper fa-2x  icon"></i>
             <p class="content-title">滑溜溜</p>          
           </div>
            <div class="content-item">
-            <i class="fa fa-pied-piper fa-lg icon"></i>
+            <i class="fa fa-pied-piper fa-2x  icon"></i>
             <p class="content-title">滑溜溜</p>    
           </div>
            <div class="content-item">
-            <i class="fa fa-pied-piper fa-lg icon"></i>
+            <i class="fa fa-pied-piper fa-2x  icon"></i>
             <p class="content-title">滑溜溜</p>            
           </div>
            <div class="content-item">
-            <i class="fa fa-pied-piper fa-lg icon"></i>
+            <i class="fa fa-pied-piper fa-2x  icon"></i>
             <p class="content-title">滑溜溜</p>        
           </div>
           <!-- <ul>
