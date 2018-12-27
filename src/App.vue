@@ -4,14 +4,14 @@
     <mt-tab-container class="tabbar-container" v-model="selected">
       <mt-tab-container-item id="首页" ref="Menuscrolls">
         <mt-swipe :auto="4000">
-          <mt-swipe-item class="slide1">
-            <!-- <img style="width: 100%" src="./assets/cat/bosimao.jpg"> -->
+          <mt-swipe-item class="slide slide1">
+            <img style="width: 100%" src="./assets/cat/1.jpg">
           </mt-swipe-item>
-          <mt-swipe-item class="slide2">
-            <!-- <img src="./assets/cat/buoumao.jpg"> -->
+          <mt-swipe-item class="slide slide2">
+            <img  style="width: 100%" src="./assets/cat/2.jpg">
           </mt-swipe-item>
-          <mt-swipe-item class="slide3">
-            <!-- <img src="./assets/cat/duanweimao.jpg"> -->
+          <mt-swipe-item class="slide slide3">
+            <img  style="width: 100%" src="./assets/cat/3.jpg">
           </mt-swipe-item>
         </mt-swipe>
         <div class="content">
@@ -42,7 +42,7 @@
       </mt-tab-container-item>
 
       <mt-tab-container-item id="我的">
-        <div class="page-part">
+        <!-- <div class="page-part">
           <mt-field label="用户名" placeholder="请输入用户名" v-model="username"></mt-field>
           <mt-field label="邮箱" placeholder="请输入邮箱" type="email" v-model="email"></mt-field>
           <mt-field label="密码" placeholder="请输入密码" type="password" v-model="password"></mt-field>
@@ -54,7 +54,7 @@
           <mt-field label="邮箱" state="success" v-model="email"></mt-field>
           <mt-field label="邮箱" state="error" v-model="email"></mt-field>
           <mt-field label="邮箱" state="warning" v-model="email"></mt-field>
-        </div>
+        </div> -->
         <router-link to="/">
           <mt-button type="danger" size="large">退出</mt-button>
         </router-link>
@@ -118,61 +118,69 @@
 
 </script>
 
-<style lang="css">
+<style lang="scss">
+  @import './assets/css/color.scss';
+
   .mint-header {
-    background-color: #0a192f;
+    background: {
+      color: $header-color;
+    }
   }
 
   /* .#7988a5 */
   .tabbar-container {
-    padding-left: 0;
-    padding-right: 0;
-    margin-top: 40px;
+    margin: {
+      top: 1.25rem;
+    }
+    padding: {
+      left: 0;
+      right: 0;
+    }
   }
 
   .mint-swipe {
     height: 18.75rem;
-    color: #fff;
+    color: $pure-white;
     font-size: 30px;
     text-align: center;
     margin-bottom: 10px;
   }
 
-  .slide1 {
-    /* background-color: #0089dc; */
-    color: #fff;
+  .slide {
+    color: $pure-white;
     height: 18.75rem !important;
-    background-image: url('assets/cat/1.jpg');
-    /* background-attachment: fixed;  */
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    -moz-background-size: 100% 100%;
+    background: {
+      repeat: no-repeat;
+      size: 100% 100%
+    }
+    -moz: {
+       background: { 
+        size: 100% 100%;
+       }
+    }
+  }
+
+  .slide1 {
+    background: {
+       image: url('assets/cat/1.jpg');
+    }
   }
 
   .slide2 {
-    /* background-color: #ffd705; */
-    color: #000;
-    height: 18.75rem !important;
-    background-image: url('assets/cat/2.jpg');
-    /* background-attachment: fixed; */
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    -moz-background-size: 100% 100%;
+    background: {
+       image: url('assets/cat/2.jpg');
+    }
+    
   }
 
   .slide3 {
-    /* background-color: #ff2d4b; */
-    color: #fff;
-    height: 18.75rem !important;
-    background-image: url('assets/cat/3.jpg');
-    /* background-attachment: fixed; */
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    -moz-background-size: 100% 100%;
+    background: {
+       image: url('assets/cat/3.jpg');
+    }
   }
 
   .content {
-    height: 15rem;
+    // height: 15rem;
     /* border:0.1rem solid red; */
   }
 
